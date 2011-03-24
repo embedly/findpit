@@ -1,0 +1,72 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+ul {list-style:none;}
+
+body { background-color: #404956; font-family:'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;}
+
+.show {display:none;}
+.shows { text-align:center;}
+
+.result {}
+.thumb img { width: 79px; height:79px;}
+.expand {display:none; }
+.result { float: left; margin: 15px;}
+
+.error SPAN{color:#D0535C;display:block;font-size:3em;font-weight:bold;margin:100px 0;}
+.info {background:#FFFFFF none repeat scroll 0 0;left:0;padding:5px;position:absolute;top:0;width:300px;-webkit-border-bottom-right-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;display:none;}
+.info A {color:#d0535c; text-decoration:none;}
+.info A.title{font-size:1.5em; font-weight:bold; }
+.info IMG {float:left;height:48px;margin:0 10px 0 0;width:48px;}
+.info P {border-top:1px solid #d0535c;;display:block;float:left;margin:10px 0;padding:10px 0 0;}
+.info UL {float:right;}
+.info LI {float:left;margin:0 10px 10px 0;font-size:0.8em;}
+
+img.large {max-width:900px;}
+.resultwrapper {background:#404956 none repeat scroll 0 0;border-top:1px solid #333333;bottom:0;height:110px;width:100%;position:absolute;}
+.results {height:110px;overflow:hidden;position:relative;width:860px;margin:0 auto;}
+
+div.results UL { width:20000em; position:absolute; } 
+
+.resultwrapper .control{display:block;width:50px;height:100px;overflow:hidden;position:absolute;top:5px;}
+.resultwrapper .prev{left:0;}
+.resultwrapper .next{right:0;}
+
+a.browse {background:transparent url(../img/browse_buttons.png) no-repeat scroll 0 0;cursor:pointer;display:block;float:left;font-size:1px;height:30px;margin:40px 0 0;width:30px;}
+
+.next A {background-position:0 -30px;margin:40px 0 0 10px;}
+.next A:hover { background-position:-30px -30px; }
+.next A:active { background-position:-60px -30px; }
+.prev A {margin:40px 0 0 5px;}
+.prev A:hover { background-position:-30px 0; }
+.prev A :active { background-position:-60px 0; }
+
+.loading {background-image:url(../img/ajax-loader.gif);background-repeat:no-repeat;display:block;height:20px;margin:100px auto;width:200px;}
+
+.simple_overlay { display:none; z-index:10000; background-color:#333; width:675px;border:1px solid #666; padding:3px 0 0 4px;-moz-box-shadow:0 0 90px 5px #000; -webkit-box-shadow: 0 0 90px #000;-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;} 
+.search {background-image:url(../img/find_small.png);background-repeat:no-repeat;bottom:115px;cursor:pointer;display:block;height:30px;right:2px;position:absolute;text-indent:-99999px;width:60px;}
+H1 {display:none;}
+.simple_overlay .close { background-image:url(../img/close.png);background-repeat:no-repeat;cursor:pointer;height:28px;position:absolute;right:-20px;top:-20px;width:28px;}
+
+#search H2 { display:none; color:#D0535C;float:left;font-size:1.2em;font-weight:bold;margin:10px;}
+#search A {color:#D0535C;font-weight:bold;}
+FORM {float:left;}
+FORM .q {-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;border:medium none;float:left;font-size:2.2em;height:49px;padding:10px 15px;width:500px;}
+FORM .q_find {cursor:pointer;background-color:#333333;background-image:url(../img/find_button.png);background-repeat:no-repeat;border:medium none;height:72px;text-indent:-99999px;width:140px;float:left;}
+
+
+/* ABOUT */
+.about {background-image:url(../img/about_small.png);background-repeat:no-repeat;bottom:115px;cursor:pointer;display:block;height:30px;right:65px;position:absolute;text-indent:-99999px;width:60px;}
+#about {color:#ffffff; padding:10px;}
+#about H2 {font-size:2em; color:#D0535C;}
+#about LI {margin: 2px 10px;}
+#about LI IMG { width:16px; height:16px; margin: 0 5px;}
+#about UL {margin: 10px 0;}
+#about .powered {float:right;}
+#about A {color:#D0535C;}
