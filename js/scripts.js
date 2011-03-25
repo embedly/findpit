@@ -72,6 +72,7 @@ function search_twitter(q, clear){
 	$.ajax({url : "http://search.twitter.com/search.json?q="+escape(q)+"&page="+page+"&rpp=15&callback=?",
 			success : function(data){
 				
+        //nothing availabe from search
 				if (data.results.length == 0){
 					if(clear){
 						$(".show").hide();
@@ -83,9 +84,9 @@ function search_twitter(q, clear){
 					return false;
 				}
 		
-		
+		    //round up valid urls and statuses
 				var urls = new Array();
-				var objs = new Array();
+				var statuses = new Array();
 				for (i=0;i<data.results.length;i++)
 				{
 					var obj = data.results[i];
@@ -95,26 +96,24 @@ function search_twitter(q, clear){
 					if (p != null){
 						var u = p[0].replace(' ', '');
 						//keep track of urls and status objs	
-						var idx = urls.length == 0 ? 0 : urls.length;
+						var idx = urls.length;
 						urls[idx] = u;
-						objs[idx] = obj;
+						statuses[idx] = obj;
 					}
 				}
+
+        //call embedly and build display
 				var counter = 0;
 				$.embedly(urls, {maxWidth:500},
 								function(oembed){					
 									if (oembed != null && oembed.type == "photo"){
-										create_result(oembed, objs[counter]);
-										counter = counter + 1;
+										create_result(oembed, statuses[counter]);
 										scroller.reload();
-
-									}
-								
+									}           
+                  counter = counter + 1;
+                  
 		
 					    });
-
-
-
 			},
 			async : false,
 			dataType: "json",
