@@ -1,4 +1,3 @@
-
 $('A.thumb').live("hover", function(e){e.preventDefault(); $(".show:visible").hide(); $($(this).attr("rel")).show()})
 $('A.thumb').live("hover", function(e){
 	e.preventDefault();
@@ -141,17 +140,23 @@ $(document).ready(function() {
 	$('.results').css("width", (110*size)); 
 	scroller = $(".results").scrollable({ size: size, api:true});
 	
-	scroller.onSeek(function(){
-		if (scroller.getPageAmount() == (scroller.getPageIndex() +1)){
-			if (page < 6){
-				search_twitter(search_q);
-			} else {
-				$('A.nextPage').hide();
-			}
-		} else {
-			$('A.nextPage').show();
-		}
-	});
+	scroller.onReload(function(){
+        if (page < 6){
+            search_twitter(search_q);
+        } 
+    });
+
+    $('A.nextPage').click(function(){
+        if (scroller.getPageAmount() == (scroller.getPageIndex() + 1)){
+            $('A.nextPage').hide();
+        } else {
+            $('A.nextPage').show();
+        }
+    });
+
+    $('A.prevPage').click(function(){
+        $('A.nextPage').show();
+    });
 	
 	$("#findform").bind('submit', function(e){
 		e.preventDefault();
