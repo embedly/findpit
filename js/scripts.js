@@ -104,15 +104,13 @@ function search_twitter(q, clear){
 
         //call embedly and build display
 				var counter = 0;
-				$.embedly(urls, {maxWidth:500},
+				$.embedly(urls, {maxWidth:500, key : EMBEDLY_API_KEY },
 								function(oembed){					
 									if (oembed != null && oembed.type == "photo"){
 										create_result(oembed, statuses[counter]);
 										scroller.reload();
 									}           
                   counter = counter + 1;
-                  
-		
 					    });
 			},
 			async : false,
